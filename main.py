@@ -40,7 +40,7 @@ class PyShader:
             st = vec2(phi / ts.pi * 2, 0.25 / rho)
             # st.x += time / 12
             st.y += time / 2
-            col += self.texture_field[st * texture_size]
+            col += self.texture_field[int(st * texture_size)]
 
             col *= rho + 0.1
             # col += 0.1 / rho * vec3(0.1, 0.1, 0.4)
